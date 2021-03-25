@@ -1,10 +1,12 @@
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import './App.css';
 import { CartScreen, HomeScreen, ProductScreen } from "./Screens";
+import { Navbar } from "./Components";
+import './App.css';
 
 function App() {
   return (
     <Router>
+      <Navbar />
       <main>
         <Switch>
           <Route exact path="/" component={HomeScreen} />
