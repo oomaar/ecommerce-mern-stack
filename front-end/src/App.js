@@ -1,12 +1,13 @@
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { CartScreen, HomeScreen, ProductScreen } from "./Screens";
-import { Navbar } from "./Components";
+import { Backdrop, Navbar } from "./Components";
 import './App.css';
 
 function App() {
   return (
     <Router>
       <Navbar />
+      <Backdrop />
       <main>
         <Switch>
           <Route exact path="/" component={HomeScreen} />
