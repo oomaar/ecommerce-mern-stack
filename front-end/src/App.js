@@ -1,13 +1,17 @@
+import { useState } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { CartScreen, HomeScreen, ProductScreen } from "./Screens";
-import { Backdrop, Navbar } from "./Components";
+import { Backdrop, Navbar, Sidebar } from "./Components";
 import './App.css';
 
 function App() {
+  const [toggleShow, setToggleShow] = useState(false);
+
   return (
     <Router>
-      <Navbar />
-      <Backdrop />
+      <Navbar click={() => setToggleShow(true)} />
+      <Sidebar click={() => setToggleShow(false)} toggleShow={toggleShow} />
+      <Backdrop click={() => setToggleShow(false)} toggleShow={toggleShow} />
       <main>
         <Switch>
           <Route exact path="/" component={HomeScreen} />

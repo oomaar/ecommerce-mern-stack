@@ -1,11 +1,7 @@
 import "./Backdrop.css";
 
-const Backdrop = () => {
-    return (
-        <div className="backdrop">
-            
-        </div>
-    );
+const Backdrop = ({ toggleShow, click }) => {
+    return toggleShow && <div className="backdrop" onClick={click}></div>;
 };
 
 export default Backdrop;
