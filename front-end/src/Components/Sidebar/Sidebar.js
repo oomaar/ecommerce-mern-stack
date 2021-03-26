@@ -12,10 +12,10 @@ const Sidebar = ({ toggleShow, click }) => {
         <div className={sideBarClass.join(" ")}>
             <ul className="sidebar__links" onClick={click}>
                 <li>
-                    <Link>
+                    <Link to="/cart">
                         <i className="fas fa-shopping-cart"></i>
                         <span>
-                            Cart <pan className="sidebar__cartBadge">0</pan>
+                            Cart <span className="sidebar__cartBadge">0</span>
                         </span>
                     </Link>
                 </li>
