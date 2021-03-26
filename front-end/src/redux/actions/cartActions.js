@@ -1,5 +1,4 @@
 import axios from "axios";
-import { json } from "express";
 import * as actionTypes from "../constants/cartConstatnts";
 
 export const addToCart = (id, qty) => async (dispatch, getState) => {
