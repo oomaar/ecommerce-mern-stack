@@ -8,10 +8,52 @@
     background: #fff;
     border-radius: 2px;
     place-items: center;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+}
+
+.cartItem__image img {
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease-in;
+}
+
+.cartItem__image img:hover {
+    transform: scale(1.1);
+}
+
+.cartItem__name {
+    text-decoration: none;
+    color: #171717;
+}
+
+.cartItem__name:hover {
+    color: #fe8033;
+}
+
+.cartItem__select {
+    padding: 10px 16px;
+}
+
+.cartItem__deleteButton {
+    padding: 10px 16px;
+    color: #171717;
+    background: #f4f4f4;
+    border: 1px solid #171717;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.3s ease-out;
+}
+
+.cartItem__deleteButton:hover,
+.cartItem__deleteButton:focus,
+.cartItem__deleteButton:active {
+    background: #2d343e;
+    color: #fe8033;
+    transform: scale(1.1);
 }
 
 .cartItem__dark {
-    background: #131921;
+    background: #2b333f;
 }
 
 .cartItem__dark .cartItem__name {
@@ -23,7 +65,8 @@
 }
 
 .cartItem__dark .cartItem__deleteButton {
-    background: #a0a0a0;
+    background: #171717;
+    color: #f4f4f4;
     border: 1px solid transparent;
     outline: none;
 }
@@ -31,37 +74,8 @@
 .cartItem__dark .cartItem__deleteButton:hover,
 .cartItem__dark .cartItem__deleteButton:focus,
 .cartItem__dark .cartItem__deleteButton:active {
-    background: #f4f4f4;
-    transform: scale(1.2);
-}
-
-.cartItem__name {
-    text-decoration: none;
-    color: #171717;
-}
-
-.cartItem__name:hover {
-    color: #dd219e;
-}
-
-.cartItem__select {
-    padding: 10px 16px;
-}
-
-.cartItem__deleteButton {
-    padding: 10px 16px;
-    color: #f00;
-    background: #f4f4f4;
-    border: 1px solid #171717;
-    cursor: pointer;
-    outline: none;
-    transition: all 0.3s ease-out;
-}
-
-.cartItem__deleteButton:hover,
-.cartItem__deleteButton:focus,
-.cartItem__deleteButton:active {
-    background: #171717;
+    background: #a0a0a0;
+    color: #fe8033;
     transform: scale(1.2);
 }
 

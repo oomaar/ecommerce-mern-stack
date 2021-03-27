@@ -8,9 +8,9 @@ const CartItem = ({ item, qtyHandleChange, handleRemoveFromCart }) => {
     
     return (
         <div className={`cartItem ${dark && 'cartItem__dark'}`}>
-            <div className="cartItem__image">
+            <Link to={`/products/${item.product}`} className="cartItem__image">
                 <img src={item.imageUrl} alt={item.name} />
-            </div>
+            </Link>
             <Link to={`/products/${item.product}`} className="cartItem__name">
                 <p>{item.name}</p>
             </Link>
