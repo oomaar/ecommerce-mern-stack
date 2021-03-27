@@ -6,16 +6,16 @@
 .homescreen__title {
     font-size: 1.5rem;
     color: #171717;
-    margin: 0 1rem 0 0.5rem;
-}
-
-.homescreen__title__dark {
-    color: #f4f4f4;
+    margin: 0 1rem 2rem 1rem;
 }
 
 .homescreen__products {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+}
+
+.homescreen__title__dark {
+    color: #f4f4f4;
 }
 
 @media (max-width: 1232px) {
