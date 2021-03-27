@@ -10,6 +10,31 @@
     place-items: center;
 }
 
+.cartItem__dark {
+    background: #131921;
+}
+
+.cartItem__dark .cartItem__name {
+    color: #f4f4f4;
+}
+
+.cartItem__dark .cartItem__price {
+    color: #f4f4f4;
+}
+
+.cartItem__dark .cartItem__deleteButton {
+    background: #a0a0a0;
+    border: 1px solid transparent;
+    outline: none;
+}
+
+.cartItem__dark .cartItem__deleteButton:hover,
+.cartItem__dark .cartItem__deleteButton:focus,
+.cartItem__dark .cartItem__deleteButton:active {
+    background: #f4f4f4;
+    transform: scale(1.2);
+}
+
 .cartItem__name {
     text-decoration: none;
     color: #171717;
@@ -29,6 +54,7 @@
     background: #f4f4f4;
     border: 1px solid #171717;
     cursor: pointer;
+    outline: none;
     transition: all 0.3s ease-out;
 }
 

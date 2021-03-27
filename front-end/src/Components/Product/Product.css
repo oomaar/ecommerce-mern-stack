@@ -9,6 +9,10 @@
     justify-content: space-between;
 }
 
+.product__dark {
+    background: #131921;
+}
+
 .product > img {
     height: 170px;
     border-radius: 10px;
@@ -16,6 +20,10 @@
 
 .product__info > p {
     margin: 10px 0;
+}
+
+.product__info__dark > p {
+    color: #f4f4f4;
 }
 
 .info__price {
@@ -41,11 +49,21 @@
     padding: 10px 16px;
     border: 1px solid #171717;
     font-size: 1rem;
+    text-transform: uppercase;
+}
+
+.info__button__dark {
+    background: #a0a0a0;
 }
 
 .info__button:hover {
     background: #171717;
     color: #f4f4f4;
+}
+
+.info__button__dark:hover {
+    background: #f4f4f4;
+    color: #171717;
 }
 
 @media (max-width: 1232px) {

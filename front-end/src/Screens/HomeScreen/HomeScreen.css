@@ -9,6 +9,10 @@
     margin: 0 1rem 0 0.5rem;
 }
 
+.homescreen__title__dark {
+    color: #f4f4f4;
+}
+
 .homescreen__products {
     display: grid;
     grid-template-columns: repeat(4, 1fr);

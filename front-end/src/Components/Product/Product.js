@@ -6,18 +6,24 @@ const Product = ({
     name,
     price,
     description,
-    productId
+    productId,
+    darkMode
 }) => {
     return (
-        <div className="product">
+        <div className={`product ${darkMode && 'product__dark'}`}>
             <img src={imageUrl} alt={name} />
 
-            <div className="product__info">
+            <div className={`product__info ${darkMode && 'product__info__dark'}`}>
                 <p className="info__name">{name}</p>
                 <p className="info__descripton">{description.substring(0, 100)}...</p>
-                <p className="info__price">{price}</p>
+                <p className="info__price">${price}</p>
 
-                <Link to={`/product/${productId}`} className="info__button">View</Link>
+                <Link
+                    to={`/product/${productId}`}
+                    className={`info__button ${darkMode && 'info__button__dark'}`}
+                >
+                    View
+                </Link>
             </div>
         </div>
     );

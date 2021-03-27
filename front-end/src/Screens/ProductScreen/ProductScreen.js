@@ -2,12 +2,14 @@ import { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { getProductDetails } from "../../redux/actions/productActions";
 import { addToCart } from "../../redux/actions/cartActions";
+import { selectDarkMode } from "../../redux/darkModeSlice";
 import "./ProductScreen.css";
 
 const ProductScreen = ({ match, history }) => {
     const [qty, setQty] = useState(1);
     const dispatch = useDispatch();
     const productDetails = useSelector(state => state.getProductDetails);
+    const dark = useSelector(selectDarkMode);
     const {
         loading,
         error,
@@ -37,14 +39,14 @@ const ProductScreen = ({ match, history }) => {
                                 <div className="left__image">
                                     <img src={product.imageUrl} alt={product.name} />
                                 </div>
-                                <div className="left__info">
+                                <div className={`left__info ${dark && 'left__info__dark'}`}>
                                     <p className="left__name">{product.name}</p>
                                     <p className="left__price">${product.price}</p>
                                     <p className="left__description">{product.description}</p>
                                 </div>
                             </div>
                             <div className="productscreen__right">
-                                <div className="right__info">
+                                <div className={`right__info ${dark && 'right__info__dark'}`}>
                                     <p>
                                         Price: <span>${product.price}</span>
                                     </p>
@@ -66,7 +68,15 @@ const ProductScreen = ({ match, history }) => {
                                         </select>
                                     </p>
                                     <p>
-                                        <button onClick={handleAddToCart} type="button">Add To Cart</button>
+                                        <button
+                                            onClick={handleAddToCart}
+                                            type="button"
+                                            className={`
+                                            productScreen__addButton ${dark && 'productScreen__addButton__dark'}
+                                            `}
+                                        >
+                                            Add To Cart
+                                        </button>
                                     </p>
                                 </div>
                             </div>

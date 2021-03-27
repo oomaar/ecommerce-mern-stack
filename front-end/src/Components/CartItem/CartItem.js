@@ -1,9 +1,13 @@
+import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import { selectDarkMode } from "../../redux/darkModeSlice";
 import "./CartItem.css";
 
 const CartItem = ({ item, qtyHandleChange, handleRemoveFromCart }) => {
+    const dark = useSelector(selectDarkMode);
+    
     return (
-        <div className="cartItem">
+        <div className={`cartItem ${dark && 'cartItem__dark'}`}>
             <div className="cartItem__image">
                 <img src={item.imageUrl} alt={item.name} />
             </div>

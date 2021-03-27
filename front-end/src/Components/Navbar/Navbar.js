@@ -1,17 +1,23 @@
 import { Link } from "react-router-dom";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import "./Navbar.css";
+import { selectDarkMode } from "../../redux/darkModeSlice";
+import { setDark } from "../../redux/darkModeSlice";
 
 const Navbar = ({ click }) => {
     const cart = useSelector(state => state.cart);
     const { cartItems } = cart;
+    const dark = useSelector(selectDarkMode);
+    const dispatch = useDispatch();
 
     const getCartCount = () => {
         return cartItems.reduce((qty, item) => qty + Number(item.qty), 0);
     };
 
+    const darker = () => dispatch(setDark());
+
     return (
-        <nav className="navbar">
+        <nav className={`navbar ${dark && 'navbar__dark'}`}>
             <div className="navbar__logo">
                 <h2>MERN Shopping Cart</h2>
             </div>
@@ -30,6 +36,9 @@ const Navbar = ({ click }) => {
                     <Link to="/">
                         Shop
                     </Link>
+                </li>
+                <li>
+                    <button onClick={darker}>Dark Mode</button>
                 </li>
             </ul>
 
