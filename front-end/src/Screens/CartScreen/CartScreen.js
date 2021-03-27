@@ -35,6 +35,7 @@ const CartScreen = () => {
                     </div>
                 ) : cartItems.map(item => (
                     <CartItem
+                        key={item.countInStock + 150 + item.imageUrl}
                         item={item}
                         qtyHandleChange={qtyHandleChange}
                         handleRemoveFromCart={handleRemoveFromCart}
