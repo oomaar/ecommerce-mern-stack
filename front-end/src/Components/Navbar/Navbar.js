@@ -24,6 +24,11 @@ const Navbar = ({ click }) => {
 
             <ul className="navbar__links">
                 <li>
+                    <Link to="/">
+                        Shop
+                    </Link>
+                </li>
+                <li>
                     <Link to="/cart" className="cart__link">
                         <span>
                             <i className="fas fa-shopping-cart"></i>
@@ -33,12 +38,7 @@ const Navbar = ({ click }) => {
                     </Link>
                 </li>
                 <li>
-                    <Link to="/">
-                        Shop
-                    </Link>
-                </li>
-                <li>
-                    <button onClick={darker}>Dark Mode</button>
+                    <button className="navBTN" onClick={darker}>Dark Mode</button>
                 </li>
             </ul>
 

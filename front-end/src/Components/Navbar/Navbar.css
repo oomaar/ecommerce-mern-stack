@@ -45,7 +45,7 @@
 }
 
 .cart__link:hover {
-    background: #dd219e;
+    background: #fe8033;
     color: #f4f4f4;
 }
 
@@ -86,7 +86,23 @@
 }
 
 .hamburger__menu:hover > div {
-    background: #dd219e;
+    background: #fe8033;
+}
+
+.navBTN {
+    padding: 10px 16px;
+    width: 100%;
+    background-color: #2d343e;
+    color: #f4f4f4;
+    border: 1px solid #2d343e;;
+    cursor: pointer;
+    transition: all 0.3s ease-in;
+    outline: none;
+}
+
+.navBTN:hover {
+    background-color: #fe8033;
+    border: 1px solid transparent;
 }
 
 @media (max-width: 960px) {

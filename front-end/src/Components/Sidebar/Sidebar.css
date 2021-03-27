@@ -69,6 +69,40 @@
   color: #171717;
 }
 
+.darkmodeBTN {
+  padding: 10px 16px;
+  width: 100%;
+  background-color: #2d343e;
+  color: #f4f4f4;
+  border: 1px solid #2d343e;;
+  cursor: pointer;
+  transition: all 0.3s ease-in;
+  margin-top: 20px;
+}
+
+.darkmodeBTN:hover {
+  background-color: #fe8033;
+  border: 1px solid transparent;
+}
+
+.sidebar__dark {
+  background-color: #131921;
+}
+
+.sidebar__dark .sidebar__links > li > a {
+  color: #f4f4f4;
+}
+
+.sidebar__dark .sidebar__links > li > a:hover {
+  background: #fe8033;
+  color: #f4f4f4;
+}
+
+.sidebar__dark .sidebar__cartBadge {
+  background-color: #f4f4f4;
+  color: #171717;
+}
+
 @media (min-width: 960px) {
   .sidebar {
     display: none;
