@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { CartScreen, HomeScreen, ProductScreen } from "./Screens";
-import { Backdrop, Navbar, Sidebar } from "./Components";
+import { Backdrop, Footer, Navbar, Sidebar } from "./Components";
 import './App.css';
 import { GlobalStyles } from "./GlobalStyles";
 import { selectDarkMode } from "./redux/darkModeSlice";
@@ -24,6 +24,7 @@ function App() {
           <Route exact path="/cart" component={CartScreen} />
         </Switch>
       </main>
+      <Footer />
     </Router>
   );
 }
