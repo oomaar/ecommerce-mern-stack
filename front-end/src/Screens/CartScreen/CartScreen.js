@@ -34,7 +34,7 @@ const CartScreen = () => {
                 {cartItems.length === 0 ? (
                     <div className={`${dark && 'darkCartScreenText'}`}>
                         Your cart is empty
-                        <Link to="/" className={`back__button ${dark && 'back__button__dark'}`}>
+                        <Link to="/" className="back__button">
                             Back to Shop
                         </Link>
                     </div>
@@ -47,12 +47,12 @@ const CartScreen = () => {
                     />
                 ))}
             </div>
-            <div className={`cartscreen__right ${dark && 'cartscreen__right__dark'}`}>
-                <div className={`cartscreen__info ${dark && 'cartscreen__info__dark'}`}>
+            <div className="cartscreen__right">
+                <div className="cartscreen__info">
                     <p>Subtotal ({getCartCount()}) items</p>
                     <p>${getCartSubTotal().toFixed(2)}</p>
                 </div>
-                <div className={`cartscreen__button ${dark && 'cartscreen__button__dark'}`}>
+                <div className="cartscreen__button">
                     <button>Proceed To Checkout</button>
                 </div>
             </div>

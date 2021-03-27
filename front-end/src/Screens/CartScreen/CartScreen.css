@@ -4,14 +4,6 @@
   margin-top: 2rem auto;
 }
 
-.cartscreen h2 {
-  margin-bottom: 1rem;
-}
-
-.cartscreen__dark h2 {
-  color: #f4f4f4;
-}
-
 .cartscreen__left {
   flex: 0.7;
   margin-right: 1rem;
@@ -19,32 +11,26 @@
   padding: 1rem;
 }
 
+.cartscreen__left h2 {
+  margin-bottom: 1rem;
+}
+
 .back__button {
   padding: 10px 16px;
   width: 100%;
-  background: #171717;
+  background-color: #2d343e;
   color: #f4f4f4;
-  border: 1px solid #171717;
+  border: 1px solid #2d343e;
   cursor: pointer;
   text-decoration: none;
-  margin: 0 10px;
+  margin: 0 20px;
+  transition: all 0.3s ease-in;
+  border-radius: 20px;
 }
 
 .back__button:hover {
-  opacity: 0.9;
-}
-
-.back__button__dark {
-  background: #a0a0a0;
-  color: #171717;
-}
-
-.back__button__dark:hover {
-  background: #fff;
-}
-
-.darkCartScreenText {
-  color: #f4f4f4;
+  background-color: #fe8033;
+  border: 1px solid transparent;
 }
 
 .cartscreen__right {
@@ -53,10 +39,7 @@
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
   height: fit-content;
   margin-top: 1.5rem;
-}
-
-.cartscreen__right__dark {
-  background: #131921;
+  border-radius: 20px;
 }
 
 .cartscreen__right div {
@@ -72,10 +55,6 @@
   padding: 10px;
 }
 
-.cartscreen__info__dark > p {
-  color: #f4f4f4;
-}
-
 .cartscreen__info p:first-child {
   font-weight: bold;
 }
@@ -83,24 +62,49 @@
 .cartscreen__button button {
   padding: 10px 16px;
   width: 100%;
-  background: #171717;
+  background-color: #2d343e;
   color: #f4f4f4;
-  border: 1px solid #171717;
+  border: 1px solid #2d343e;;
   cursor: pointer;
+  transition: all 0.3s ease-in;
 }
 
 .cartscreen__button button:hover {
-  opacity: 0.9;
+  background-color: #fe8033;
+  border: 1px solid transparent;
 }
 
-.cartscreen__button__dark button {
-  background: #a0a0a0;
-  color: #171717;
+.cartscreen__dark h2 {
+  color: #f4f4f4;
 }
 
-.cartscreen__button__dark button:hover {
-  background: #f4f4f4;
-  color: #171717;
+.cartscreen__dark .back__button {
+  background: #171717;
+}
+
+.cartscreen__dark .back__button:hover {
+  background: #fe8033;
+}
+
+.darkCartScreenText {
+  color: #f4f4f4;
+}
+
+.cartscreen__dark .cartscreen__right {
+  background: #2b333f;
+}
+
+.cartscreen__dark .cartscreen__info > p {
+  color: #f4f4f4;
+}
+
+.cartscreen__dark .cartscreen__button button {
+  background: #171717;
+  transition: all 0.3s ease-in;
+}
+
+.cartscreen__dark .cartscreen__button button:hover {
+  background: #fe8033;
 }
 
 @media (max-width: 1320px) {
