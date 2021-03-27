@@ -13,7 +13,8 @@ const Product = ({
         <div className={`product ${darkMode && 'product__dark'}`}>
             <img src={imageUrl} alt={name} />
 
-            <div className={`product__info ${darkMode && 'product__info__dark'}`}>
+            {/* <div className={`product__info ${darkMode && 'product__info__dark'}`}> */}
+            <div className="product__info">
                 <p className="info__name">{name}</p>
                 <p className="info__descripton">{description.substring(0, 100)}...</p>
                 <p className="info__price">${price}</p>

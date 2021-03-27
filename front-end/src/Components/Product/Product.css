@@ -1,16 +1,25 @@
 .product {
     width: 300px;
     padding: 1rem;
-    background: #fff;
+    background: transparent;
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
     margin: 10px auto;
+    border-radius: 20px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    transition: all 0.3s ease-in;
+    text-align: center;
 }
 
-.product__dark {
-    background: #131921;
+.product:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.product:hover .info__button {
+    background-color: #fe8033;
 }
 
 .product > img {
@@ -22,14 +31,6 @@
     margin: 10px 0;
 }
 
-.product__info__dark > p {
-    color: #f4f4f4;
-}
-
-.info__price {
-    font-weight: bold;
-}
-
 .info__name {
     font-size: 1rem;
     overflow: hidden;
@@ -39,32 +40,37 @@
     font-size: 0.8rem;
 }
 
-.info__button {
-    width: 100%;
-    display: block;
+.info__price {
+    font-weight: bold;
+    color: #fe8033;
+}
+
+.info__button {    
     text-decoration: none;
-    text-align: center;
-    color: #171717;
-    background: #f4f4f4;
-    padding: 10px 16px;
-    border: 1px solid #171717;
-    font-size: 1rem;
-    text-transform: uppercase;
+    width:130px;
+    height:35px;
+    font-size:14px;
+    border-radius: 35px;
+    background-color: #2d343e;
+    color: rgba(255, 255, 255, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor:pointer;
+    position:relative;
+    transition:background-color 0.3s ease;
+    overflow:hidden;
+    margin: 0 auto;
 }
 
-.info__button__dark {
-    background: #a0a0a0;
+.product__dark:hover {
+    background: #2b333f;
 }
 
-.info__button:hover {
-    background: #171717;
+.product__dark .product__info > p {
     color: #f4f4f4;
 }
 
-.info__button__dark:hover {
-    background: #f4f4f4;
-    color: #171717;
-}
 
 @media (max-width: 1232px) {
     .product {
