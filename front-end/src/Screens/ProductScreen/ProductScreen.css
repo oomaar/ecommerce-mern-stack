@@ -14,25 +14,18 @@
     flex: 0.6;
 }
 
+.left__image img {
+    border-radius: 20px;
+}
+
 .left__info {
     margin: 1rem;
     flex: 0.4;
     background: #fff;
     height: fit-content;
     font-size: 0.9rem;
-}
-
-.left__info__dark {
-    background: #131921;
-}
-
-.left__info__dark > p {
-    color: #f4f4f4;
-}
-
-.left__name {
-    font-weight: bold;
-    font-size: 1.3rem;
+    border-radius: 20px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
 }
 
 .left__info > p,
@@ -44,6 +37,11 @@
 .left__info > p:last-child,
 .right__info > p:last-child {
     border: none;
+}
+
+.left__name {
+    font-weight: bold;
+    font-size: 1.3rem;
 }
 
 .left__price {
@@ -63,14 +61,7 @@
     margin: 1rem;
     background: #fff;
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
-}
-
-.right__info__dark {
-    background: #131921;
-}
-
-.right__info__dark > p {
-    color: #f4f4f4;
+    border-radius: 15px;
 }
 
 .right__info > p {
@@ -80,35 +71,49 @@
     grid-template-columns: repeat(2, 1fr);
 }
 
-.productScreen__addButton {
-    grid-column: 1/-1;
-    padding: 10px 16px;
-    background: #171717;
-    color: #f4f4f4;
-    border: 1px solid #171717;
-    cursor: pointer;
-    outline: none;
-}
-
-.productScreen__addButton:hover {
-    background: #a0a0a0;
-    color: #171717;
-    border: 1px solid transparent;
-}
-
-.productScreen__addButton__dark {
-    background: #a0a0a0;
-    color: #171717;
-}
-
-.productScreen__addButton__dark:hover {
-    background: #f4f4f4;
-    color: #171717;
-}
-
 .right__info select {
     padding: 10px 16px;
     outline: none;
+}
+
+.right__button {
+    grid-column: 1/-1;
+    padding: 10px 16px;
+    background-color: #2d343e;
+    color: #f4f4f4;
+    border: 1px solid #2d343e;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.3s ease-in;
+}
+
+.right__button:hover {
+    background-color: #fe8033;
+    border: 1px solid transparent;
+}
+
+.productscreen__dark .left__info {
+    background: #2b333f;
+}
+
+.productscreen__dark .left__info > p {
+    color: #f4f4f4;
+}
+
+.productscreen__dark .right__info {
+    background: #2b333f;
+}
+
+.productscreen__dark .right__info > p {
+    color: #f4f4f4;
+}
+
+.productscreen__dark .right__button {
+    background-color: #171717;
+}
+
+.productscreen__dark .right__button:hover {
+    background-color: #fe8033;
 }
 
 @media (max-width: 960px) {

@@ -28,7 +28,7 @@ const ProductScreen = ({ match, history }) => {
     }
 
     return (
-        <div className="productscreen">
+        <div className={`productscreen ${dark && 'productscreen__dark'}`}>
             {loading
                 ? <h2>Spinner...</h2>
                 : error
@@ -39,14 +39,14 @@ const ProductScreen = ({ match, history }) => {
                                 <div className="left__image">
                                     <img src={product.imageUrl} alt={product.name} />
                                 </div>
-                                <div className={`left__info ${dark && 'left__info__dark'}`}>
+                                <div className="left__info">
                                     <p className="left__name">{product.name}</p>
                                     <p className="left__price">${product.price}</p>
                                     <p className="left__description">{product.description}</p>
                                 </div>
                             </div>
                             <div className="productscreen__right">
-                                <div className={`right__info ${dark && 'right__info__dark'}`}>
+                                <div className="right__info">
                                     <p>
                                         Price: <span>${product.price}</span>
                                     </p>
@@ -71,9 +71,7 @@ const ProductScreen = ({ match, history }) => {
                                         <button
                                             onClick={handleAddToCart}
                                             type="button"
-                                            className={`
-                                            productScreen__addButton ${dark && 'productScreen__addButton__dark'}
-                                            `}
+                                            className="right__button"
                                         >
                                             Add To Cart
                                         </button>
